@@ -4,7 +4,6 @@ var autoprefixer	= require('gulp-autoprefixer');
 var plumber				= require('gulp-plumber');
 var sourcemaps 		= require('gulp-sourcemaps');
 var browserSync 	= require('browser-sync').create();
-var reload				= browserSync.reload
 
 gulp.task('browser-sync', function() {
 	browserSync.init({
@@ -14,6 +13,10 @@ gulp.task('browser-sync', function() {
 	});
 });
 
+gulp.task("browser-reload", function() {
+  browserSync.reload();
+});
+
 gulp.task('sass', function(){
 	gulp.src('htdocs/common/sass/*.scss')
 	.pipe(sourcemaps.init())
@@ -21,7 +24,8 @@ gulp.task('sass', function(){
 	.pipe(sass())
 	.pipe(autoprefixer())
 	.pipe(sourcemaps.write('../map'))
-	.pipe(gulp.dest('htdocs/common/css'));
+	.pipe(gulp.dest('htdocs/common/css'))
+	.pipe(browserSync.stream());
 });
 
 gulp.task('watch', function(){
@@ -29,8 +33,7 @@ gulp.task('watch', function(){
 	gulp.watch([
 		'htdocs/**/*.html',
 		'htdocs/common/js/*.js',
-		'htdocs/common/css/*.css'
-	]).on('change', reload);
+	],['browser-reload']);
 });
 
 gulp.task('default', ['browser-sync','watch']);
