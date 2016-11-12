@@ -1,4 +1,4 @@
-# gulpfile
+# gulp
 
 ## Node.jsのインストール
 [Node.jsインストーラ](https://nodejs.org/ja/)
