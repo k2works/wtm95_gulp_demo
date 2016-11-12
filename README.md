@@ -23,11 +23,11 @@ npm install --save-dev gulp browser-sync gulp-plumber gulp-sass gulp-notify gulp
 project/
 	├ htdocs/
 	│		├ common/
-	│	  │ 	├ sass/
-	│	  │ 	├ css/
-	│	  │ 	├ map/
-	│	  │ 	├ img/
-	│	  │ 	└ js/	
+	│		│ 	├ sass/
+	│		│ 	├ css/
+	│		│ 	├ map/
+	│		│ 	├ img/
+	│		│ 	└ js/	
 	│		└index.html
 	│
 	├ .git/
