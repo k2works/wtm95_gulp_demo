@@ -17,7 +17,7 @@ npm install --save-dev gulp browser-sync gulp-plumber gulp-sass gulp-notify gulp
 ```
 
 
-## Directory Map
+## このでものディレクトリマップ
 
 ```
 project/
@@ -35,4 +35,11 @@ project/
 	├ gulpfile.js
 	└ package.json
   
+```
+
+
+## もしプラグインが壊れていた場合
+
+```
+npm rebuild [壊れてたプラグイン名]
 ```
