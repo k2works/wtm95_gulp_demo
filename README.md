@@ -1,5 +1,11 @@
 # gulpfile
 
+## gulpのインストール
+
+```
+npm install -g gulp
+```
+
 ## プラグイン
 
 + browser-sync
