@@ -11,6 +11,7 @@ npm install -g gulp
 
 ## プラグイン
 
++ gulp
 + browser-sync
 + gulp-sass
 + gulp-plumber
@@ -20,11 +21,11 @@ npm install -g gulp
 ### プラグインのインストール
 
 ```
-npm install --save-dev gulp browser-sync gulp-plumber gulp-sass gulp-autoprefixer gulp-sourcemaps
+npm install
 ```
 
 
-## このでものディレクトリマップ
+## このデモのディレクトリマップ
 
 ```
 project/
